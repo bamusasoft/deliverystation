@@ -4,20 +4,36 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="App3.HomePage">
+             x:Class="App3.HomePage" FlowDirection="RightToLeft" >
     <ContentPage.Content>
-        
-        <StackLayout>
-            <Label Text="DeliveryStation" 
+
+        <StackLayout Margin="10" Padding="5">
+            <Label Text="DeliveryStation"  Margin="0, 50, 0, 10"
              HorizontalOptions="Center"
                FontSize="Large"/>
             
             <Label Text="الرجاء اختيار نوع الخدمة"
-                  HorizontalOptions="CenterAndExpand" />
+                  HorizontalOptions="CenterAndExpand" Padding="5"/>
+            <Grid Margin="5" Padding="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
 
-            <Label Text="المطاعم"/>
-            <CheckBox IsChecked="True"/>
-            
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <CheckBox Grid.Row="0" Grid.Column="0" IsChecked="True" VerticalOptions="CenterAndExpand" />
+                <Label Grid.Row="0" Grid.Column="1" Text="المطاعم" VerticalOptions="CenterAndExpand"/>
+                <CheckBox Grid.Row="1" Grid.Column="0" IsChecked="False" VerticalOptions="CenterAndExpand" />
+                <Label Grid.Row="1" Grid.Column="1" Text="سوبر ماركت" VerticalOptions="CenterAndExpand"/>
+                <CheckBox Grid.Row="2" Grid.Column="0" IsChecked="False" VerticalOptions="CenterAndExpand" />
+                <Label Grid.Row="2" Grid.Column="1" Text="صيدليات" VerticalOptions="CenterAndExpand"/>
+            </Grid>
+            <Button x:Name="btnOpenService" HorizontalOptions="FillAndExpand" VerticalOptions="Center" 
+                    Text="المتابعة" Clicked="OnOpenServiceClicked"/>
 
         </StackLayout>
     </ContentPage.Content>

@@ -11,12 +11,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\KFC.png" />
+    <None Remove="Images\shik.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\KFC.png" />
+    <EmbeddedResource Include="Images\shik.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.5.0.617" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resturants.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

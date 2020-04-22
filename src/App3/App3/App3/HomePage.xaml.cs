@@ -16,5 +16,12 @@ namespace App3
         {
             InitializeComponent();
         }
+
+        
+
+        private void OnOpenServiceClicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new Resturants();
+        }
     }
 }

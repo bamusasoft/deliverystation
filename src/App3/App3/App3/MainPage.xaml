@@ -6,26 +6,27 @@
              mc:Ignorable="d"
              x:Class="App3.MainPage" FlowDirection="RightToLeft">
 
-    <StackLayout>
-        <Label Text="DeliveryStation" 
-           HorizontalOptions="Center"
-               FontSize="Large"/>
+    <StackLayout Margin="10" Padding="5">
+        <Label Text="DeliveryStation" HorizontalOptions="Center"
+               FontSize="Large" Margin="0, 50, 0, 10"/>
         <Label Text="تسجيل الدخول" HorizontalOptions="Center"/>
-        <Grid>
+        <Grid Margin="5" Padding="5">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" Grid.Column="0" Text="الايميل"/>
             <Entry x:Name="txtUserName" Grid.Row="0" Grid.Column="1" />
             <Label Grid.Row="1" Grid.Column="0" Text="كلمة المرور" />
             <Entry x:Name="txtPassword" Grid.Row="1" Grid.Column="1" IsPassword="True" />
         </Grid>
-        <Button x:Name="btnLogin" Text="تسجيل الدخول" HorizontalOptions="CenterAndExpand" Clicked="OnLoginClicked"/>
+        <Button x:Name="btnLogin" Text="تسجيل الدخول" HorizontalOptions="FillAndExpand" VerticalOptions="Center"
+                Clicked="OnLoginClicked"/>
+                 
 
 
 
