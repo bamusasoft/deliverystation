@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App3.MainPage" FlowDirection="RightToLeft">
+
+    <StackLayout>
+        <Label Text="DeliveryStation" 
+           HorizontalOptions="Center"
+               FontSize="Large"/>
+        <Label Text="تسجيل الدخول" HorizontalOptions="Center"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Text="الايميل"/>
+            <Entry x:Name="txtUserName" Grid.Row="0" Grid.Column="1" />
+            <Label Grid.Row="1" Grid.Column="0" Text="كلمة المرور" />
+            <Entry x:Name="txtPassword" Grid.Row="1" Grid.Column="1" IsPassword="True" />
+        </Grid>
+        <Button x:Name="btnLogin" Text="تسجيل الدخول" HorizontalOptions="CenterAndExpand" Clicked="OnLoginClicked"/>
+
+
+
+    </StackLayout>
+
+</ContentPage>
