@@ -10,22 +10,23 @@ using Xamarin.Forms.Xaml;
 namespace App3
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Resturants : ContentPage
+    public partial class RestMenu : ContentPage
     {
-        public IList<Resturant> Rests { get; set; }
-        public Resturants()
+        public IList<Menu> Menus { get; set; }
+
+        public RestMenu()
         {
             InitializeComponent();
 
-            Rests = new List<Resturant>();
-            Rests.Add(new Resturant
+            Menus = new List<Menu>();
+            Menus.Add(new Menu
             {
                 Name = "كنتاكي",
-                Description = "مأكولات سريعة",
+                Price = 10.5,
                 ImageUrl = ImageSource.FromResource("App3.Images.KFC.png")
                 //ImageUrl = "http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
 
-            }) ;
+            });
             //Rests.Add(new Resturant
             //{
             //    Name = "ماكدونالدز",
@@ -38,13 +39,12 @@ namespace App3
 
         private void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            Resturant selectedItem = e.SelectedItem as Resturant;
+
         }
 
         private void OnListViewItemTapped(object sender, ItemTappedEventArgs e)
         {
-            Resturant tappedItem = e.Item as Resturant;
-            App.Current.MainPage = new RestMenu();
+
         }
     }
 }
