@@ -14,14 +14,17 @@ namespace App3
     {
         public IList<Menu> Menus { get; set; }
 
-        public RestMenu()
+        public RestMenu(string restName)
         {
             InitializeComponent();
+            if(restName == "كنتاكي")
+            {
 
+            }
             Menus = new List<Menu>();
             Menus.Add(new Menu
             {
-                Name = "كنتاكي",
+                Name = "دجاج",
                 Price = 10.5,
                 ImageUrl = ImageSource.FromResource("App3.Images.KFC.png")
                 //ImageUrl = "http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"

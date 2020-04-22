@@ -44,7 +44,8 @@ namespace App3
         private void OnListViewItemTapped(object sender, ItemTappedEventArgs e)
         {
             Resturant tappedItem = e.Item as Resturant;
-            App.Current.MainPage = new RestMenu();
+            string restuName = tappedItem.Name;
+            App.Current.MainPage = new RestMenu(restuName);
         }
     }
 }
