@@ -13,23 +13,10 @@
 
             <Label Text="المطاعم المتاحة"
                   HorizontalOptions="CenterAndExpand" Padding="5"/>
-            <!--<ListView >
-                <ListView.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Baboon</x:String>
-                        <x:String>Capuchin Monkey</x:String>
-                        <x:String>Blue Monkey</x:String>
-                        <x:String>Squirrel Monkey</x:String>
-                        <x:String>Golden Lion Tamarin</x:String>
-                        <x:String>Howler Monkey</x:String>
-                        <x:String>Japanese Macaque</x:String>
-                    </x:Array>
-                </ListView.ItemsSource>
-            </ListView>-->
             <ListView ItemsSource="{Binding Rests}"
-                      HasUnevenRows="True"
-                      ItemSelected="OnListViewItemSelected"
-                      ItemTapped="OnListViewItemTapped">
+                  HasUnevenRows="true"
+                  ItemSelected="OnListViewItemSelected"
+                  ItemTapped="OnListViewItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -42,25 +29,23 @@
                                     <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"
-                                       Source="{Binding ImageUrl}"
-                                       Aspect="AspectFill"
-                                       HeightRequest="60"
-                                       WidthRequest="60"/>
-                                <Label Grid.Row="0" Grid.Column="1"
-                                  Text="{Binding Name}"
-                                  FontAttributes="Bold" />
-                               
-                                <Label Grid.Row="1"
-                                      Grid.Column="1"
-                                 Text="{Binding Description}"
-                                 VerticalOptions="End" />
+                                <Image Grid.RowSpan="2" 
+                                   Source="{Binding ImageUrl}" 
+                                   Aspect="AspectFill"
+                                   HeightRequest="60"
+                                   WidthRequest="60" />
+                                <Label Grid.Column="1" 
+                                   Text="{Binding Name}"
+                                   FontAttributes="Bold" />
+                                <Label Grid.Row="1" 
+                                   Grid.Column="1" 
+                                   Text="{Binding Description}"
+                                   VerticalOptions="End" />
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
 
         </StackLayout>
 
