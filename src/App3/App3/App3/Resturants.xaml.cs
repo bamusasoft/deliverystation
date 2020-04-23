@@ -45,7 +45,7 @@ namespace App3
         {
             Resturant tappedItem = e.Item as Resturant;
             string restuName = tappedItem.Name;
-            App.Current.MainPage = new RestMenu(restuName);
+            App.Current.MainPage = new DeliveryPage(1);
         }
     }
 }

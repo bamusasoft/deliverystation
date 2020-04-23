@@ -22,7 +22,7 @@ namespace App3
 
         private async void OnLoginClicked(object sender, EventArgs e)
         {
-            if(txtUserName.Text == "Admin" && txtPassword.Text == "0000")
+            if(txtUserName.Text == "admin" && txtPassword.Text == "0000")
             {
                 App.Current.MainPage = new HomePage();
             }
