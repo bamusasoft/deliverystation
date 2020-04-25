@@ -11,7 +11,7 @@
              HorizontalOptions="Center"
                FontSize="Large"/>
 
-            <Label Text="المطاعم المتاحة"
+            <Label Text="المطاعم المتاحة" FontAttributes="Bold"
                   HorizontalOptions="CenterAndExpand" Padding="5"/>
             <ListView ItemsSource="{Binding DeliveryCompanies}"
                   HasUnevenRows="true"
@@ -24,13 +24,13 @@
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Image Grid.RowSpan="3" 
+                                <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" 
                                    Source="{Binding ImageUrl}" 
                                    Aspect="AspectFill"
                                    HeightRequest="60"
@@ -38,12 +38,11 @@
                                 <Label Grid.Column="1" Grid.Row="0"
                                    Text="{Binding Name}"
                                    FontAttributes="Bold"
-                                       HorizontalOptions="Center"/>
+                                       HorizontalOptions="Start"/>
                                 <Label Grid.Column="1" Grid.Row="1"
-                                   Text="{Binding DeliveryTime}"
-                                   />
-                                <Label Grid.Row="2" 
-                                   Grid.Column="1" 
+                                   Text="{Binding DeliveryTime}"/>
+
+                                <Label Grid.Column="1" Grid.Row="2" 
                                    Text="{Binding Price}"
                                    VerticalOptions="End" />
                             </Grid>

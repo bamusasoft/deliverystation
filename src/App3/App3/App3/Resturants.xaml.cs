@@ -20,19 +20,28 @@ namespace App3
             Rests = new List<Resturant>();
             Rests.Add(new Resturant
             {
+                Id = 1,
+                Name = "ماكدونالدز",
+                Description = "مأكولات سريعة",
+                ImageUrl = ImageSource.FromResource("App3.Images.Mac.png")
+
+            });
+            Rests.Add(new Resturant
+            {
+                Id = 2,
                 Name = "كنتاكي",
                 Description = "مأكولات سريعة",
                 ImageUrl = ImageSource.FromResource("App3.Images.KFC.png")
-                //ImageUrl = "http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
 
-            }) ;
-            //Rests.Add(new Resturant
-            //{
-            //    Name = "ماكدونالدز",
-            //    Description = "مأكولات سريعة",
-            //    ImageUrl = ImageSource.FromResource("App3.Images.shik.png").ToString()
+            });
+            Rests.Add(new Resturant
+            {
+                Id = 3,
+                Name = "شيك شاك",
+                Description = "مأكولات سريعة",
+                ImageUrl = ImageSource.FromResource("App3.Images.shik.png")
 
-            //});
+            });
             BindingContext = this;
         }
 
@@ -41,11 +50,11 @@ namespace App3
             Resturant selectedItem = e.SelectedItem as Resturant;
         }
 
-        private void OnListViewItemTapped(object sender, ItemTappedEventArgs e)
+        private async void OnListViewItemTapped(object sender, ItemTappedEventArgs e)
         {
             Resturant tappedItem = e.Item as Resturant;
-            string restuName = tappedItem.Name;
-            App.Current.MainPage = new DeliveryPage(1);
+            int restId = tappedItem.Id;
+            await App.Current.MainPage.Navigation.PushAsync( new DeliveryPage(restId));
         }
     }
 }

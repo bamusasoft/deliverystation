@@ -27,7 +27,6 @@ namespace App3
                 Name = "دجاج",
                 Price = 10.5,
                 ImageUrl = ImageSource.FromResource("App3.Images.KFC.png")
-                //ImageUrl = "http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
 
             });
             //Rests.Add(new Resturant

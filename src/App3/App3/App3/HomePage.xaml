@@ -14,7 +14,7 @@
             
             <Label Text="برجاء اختيار نوع الخدمة"
                   HorizontalOptions="CenterAndExpand" Padding="5"/>
-            <Grid Margin="5" Padding="5">
+            <Grid Margin="5" Padding="5" HorizontalOptions="Center">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -22,14 +22,14 @@
 
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <CheckBox Grid.Row="0" Grid.Column="0" IsChecked="True" VerticalOptions="CenterAndExpand" />
-                <Label Grid.Row="0" Grid.Column="1" Text="المطاعم" VerticalOptions="CenterAndExpand"/>
-                <CheckBox Grid.Row="1" Grid.Column="0" IsChecked="False" VerticalOptions="CenterAndExpand" />
-                <Label Grid.Row="1" Grid.Column="1" Text="سوبر ماركت" VerticalOptions="CenterAndExpand"/>
-                <CheckBox Grid.Row="2" Grid.Column="0" IsChecked="False" VerticalOptions="CenterAndExpand" />
+                <CheckBox Grid.Row="0" Grid.Column="0" IsChecked="True" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
+                <Label Grid.Row="0" Grid.Column="1" Text="المطاعم" VerticalOptions="CenterAndExpand" HorizontalOptions="Start"/>
+                <CheckBox Grid.Row="1" Grid.Column="0" IsChecked="False" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="سوبر ماركت" VerticalOptions="CenterAndExpand" HorizontalOptions="Start"/>
+                <CheckBox Grid.Row="2" Grid.Column="0" IsChecked="False" VerticalOptions="CenterAndExpand" HorizontalOptions="Start"/>
                 <Label Grid.Row="2" Grid.Column="1" Text="صيدليات" VerticalOptions="CenterAndExpand"/>
             </Grid>
             <Button x:Name="btnOpenService" HorizontalOptions="FillAndExpand" VerticalOptions="Center" 

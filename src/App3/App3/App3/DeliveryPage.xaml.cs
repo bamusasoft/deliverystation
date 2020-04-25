@@ -1,5 +1,4 @@
-﻿using Android.Content;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -52,7 +51,7 @@ namespace App3
 
         }
 
-        private async  void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             //var supportUri = await Launcher.CanOpenAsync("photos.app.goo.gl://");
             //if (supportUri)
@@ -60,29 +59,49 @@ namespace App3
             //await Launcher.OpenAsync(new Uri("uber://"));
             //await Launcher.OpenAsync(new Uri("https://play.google.com/store/apps/details?id=com.whatsapp"));
 
+            
+
+
+
+
+            //}
+        }
+
+        private async void OnListViewItemTapped(object sender, ItemTappedEventArgs e)
+        {
             try
             {
+                DeliveryCompany tappedItem = e.Item as DeliveryCompany;
+                int companyId = tappedItem.Id;
                 //await Launcher.OpenAsync(new Uri("twitter://compose?text=Hello"));
-                await DependencyService.Get<IOpenAppService>().Launch("com.hungerstation.android.web");
-                //Device.OpenUri(new Uri("market://details?id=com.udemy.android"));
+                string platform = Device.RuntimePlatform;
+                if (platform == "iOS")
+                {
+                    await DependencyService.Get<IOpenAppService>().Launch("maps://");
+                }
+                else
+                {
+                    if(companyId == 1)//Open Hunger
+                    {
+                        await DependencyService.Get<IOpenAppService>().Launch("com.hungerstation.android.web");
+                    }
+                    else if(companyId == 2) //Open Wassel
+                    {
+                        await DependencyService.Get<IOpenAppService>().Launch("com.w99l.customer.app");
+                    }
+                    else if (companyId == 2) //Open Uber eats
+                    {
+                        await DependencyService.Get<IOpenAppService>().Launch("com.ubercab.eats");
+                    }
 
+                }
 
             }
             catch (Exception ex)
             {
 
-               await  DisplayAlert("D", ex.Message,"Ok");
+                await DisplayAlert("D", ex.Message, "Ok");
             }
-            
-
-            
-
-            //}
-        }
-
-        private void OnListViewItemTapped(object sender, ItemTappedEventArgs e)
-        {
-
         }
     }
 }

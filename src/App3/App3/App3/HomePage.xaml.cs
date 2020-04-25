@@ -19,9 +19,9 @@ namespace App3
 
         
 
-        private void OnOpenServiceClicked(object sender, EventArgs e)
+        private async void OnOpenServiceClicked(object sender, EventArgs e)
         {
-            App.Current.MainPage = new Resturants();
+            await App.Current.MainPage.Navigation.PushAsync( new Resturants());
         }
     }
 }

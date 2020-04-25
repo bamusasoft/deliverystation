@@ -24,7 +24,8 @@ namespace App3
         {
             if(txtUserName.Text == "admin" && txtPassword.Text == "0000")
             {
-                App.Current.MainPage = new HomePage();
+                //App.Current.MainPage = new HomePage();
+                await App.Current.MainPage.Navigation.PushAsync(new HomePage());
             }
         }
     }
