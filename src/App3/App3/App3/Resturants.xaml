@@ -6,13 +6,20 @@
              mc:Ignorable="d"
              x:Class="App3.Resturants" FlowDirection="RightToLeft">
     <ContentPage.Content>
-        <StackLayout Margin="20,35,20,20">
-            <Label Text="DeliveryStation"  Margin="0, 50, 0, 10"
-             HorizontalOptions="Center"
-               FontSize="Large"/>
-
+        <StackLayout Spacing="10" Padding="10">
+            <Label Text="DeliveryStation"  HorizontalOptions="Center" FontSize="Large" Padding="10"/>
+    
             <Label Text="المطاعم المتاحة"
-                  HorizontalOptions="CenterAndExpand" Padding="5"/>
+                  HorizontalOptions="CenterAndExpand" Padding="5"  />
+            <Picker x:Name="pickerCategory" FontSize="Medium" SelectedIndexChanged="OnSelectedIndexChanged" Title="برجاء اختيار نوع الخدمة">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>مطاعم</x:String>
+                        <x:String>سوبر ماركت</x:String>
+                        <x:String>صيدليات</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
             <ListView ItemsSource="{Binding Rests}"
                   HasUnevenRows="true"
                   ItemSelected="OnListViewItemSelected"

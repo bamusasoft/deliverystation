@@ -22,7 +22,7 @@ namespace App3
                 Id = 1,
                 Name = "هنقرستيشن",
                 Price = "سعر التوصيل: " + "20 - 25",
-                DeliveryTime = "سعر التوصيل: " + "40-45",
+                DeliveryTime = "وقت التوصيل: " + "40-45",
                 ImageUrl = ImageSource.FromResource("App3.Images.Hunger.png")
 
 
@@ -32,7 +32,7 @@ namespace App3
                 Id = 2,
                 Name = "وصل",
                 Price = "سعر التوصيل: " + "22 - 25",
-                DeliveryTime = "سعر التوصيل: " + "50-55",
+                DeliveryTime = "وقت التوصيل: " + "50-55",
                 ImageUrl = ImageSource.FromResource("App3.Images.Wassel.png")
 
 
@@ -42,7 +42,7 @@ namespace App3
                 Id = 3,
                 Name = "اوبر ايتس",
                 Price = "سعر التوصيل: " + "27 - 30",
-                DeliveryTime = "سعر التوصيل: " + "30-35",
+                DeliveryTime = "وقت التوصيل: " + "30-35",
                 ImageUrl = ImageSource.FromResource("App3.Images.Uber.png")
 
 
@@ -51,7 +51,7 @@ namespace App3
 
         }
 
-        private async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             //var supportUri = await Launcher.CanOpenAsync("photos.app.goo.gl://");
             //if (supportUri)
@@ -59,12 +59,7 @@ namespace App3
             //await Launcher.OpenAsync(new Uri("uber://"));
             //await Launcher.OpenAsync(new Uri("https://play.google.com/store/apps/details?id=com.whatsapp"));
 
-            
-
-
-
-
-            //}
+           //}
         }
 
         private async void OnListViewItemTapped(object sender, ItemTappedEventArgs e)

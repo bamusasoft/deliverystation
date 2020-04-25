@@ -14,6 +14,8 @@
     <None Remove="Images\Hunger.png" />
     <None Remove="Images\KFC.png" />
     <None Remove="Images\Mac.png" />
+    <None Remove="Images\Nahdi.png" />
+    <None Remove="Images\Panda.png" />
     <None Remove="Images\shik.png" />
     <None Remove="Images\Uber.png" />
     <None Remove="Images\Wassel.png" />
@@ -23,6 +25,8 @@
     <EmbeddedResource Include="Images\Hunger.png" />
     <EmbeddedResource Include="Images\KFC.png" />
     <EmbeddedResource Include="Images\Mac.png" />
+    <EmbeddedResource Include="Images\Nahdi.png" />
+    <EmbeddedResource Include="Images\Panda.png" />
     <EmbeddedResource Include="Images\shik.png" />
     <EmbeddedResource Include="Images\Uber.png" />
     <EmbeddedResource Include="Images\Wassel.png" />

@@ -6,11 +6,9 @@
              mc:Ignorable="d"
              x:Class="App3.DeliveryPage" FlowDirection="RightToLeft">
     <ContentPage.Content>
-        <StackLayout Margin="20,35,20,20">
-            <Label Text="DeliveryStation"  Margin="0, 50, 0, 10"
-             HorizontalOptions="Center"
-               FontSize="Large"/>
-
+        <StackLayout Padding="10" Spacing="10">
+            <Label Text="DeliveryStation"  Padding="10" HorizontalOptions="Center" FontSize="Large"/>
+             
             <Label Text="المطاعم المتاحة" FontAttributes="Bold"
                   HorizontalOptions="CenterAndExpand" Padding="5"/>
             <ListView ItemsSource="{Binding DeliveryCompanies}"

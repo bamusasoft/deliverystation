@@ -6,11 +6,14 @@
              mc:Ignorable="d"
              x:Class="App3.MainPage" FlowDirection="RightToLeft">
 
-    <StackLayout Margin="10" Padding="5">
-        <Label Text="DeliveryStation" HorizontalOptions="Center"
-               FontSize="Large" Margin="0, 50, 0, 10"/>
-        <Label Text="تسجيل الدخول" HorizontalOptions="Center"/>
-        <Grid Margin="5" Padding="5">
+    <StackLayout Margin="10" Padding="5" Spacing="10">
+        <Label Text="DeliveryStation" HorizontalOptions="Center" FontSize="Large" Margin="0, 50, 0, 10" />
+
+        <Label Text="تسجيل الدخول" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Large"/>
+        <Entry x:Name="txtUserName" Grid.Row="0" Grid.Column="1" Placeholder="اسم المستخدم"/>
+        <Entry x:Name="txtPassword" Grid.Row="1" Grid.Column="1" IsPassword="True" Placeholder="كلمة المرور" />
+
+        <!--<Grid Margin="5" Padding="5">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -20,10 +23,8 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" Grid.Column="0" Text="الايميل"/>
-            <Entry x:Name="txtUserName" Grid.Row="0" Grid.Column="1" />
             <Label Grid.Row="1" Grid.Column="0" Text="كلمة المرور" />
-            <Entry x:Name="txtPassword" Grid.Row="1" Grid.Column="1" IsPassword="True" />
-        </Grid>
+        </Grid>-->
         <Button x:Name="btnLogin" Text="تسجيل الدخول" HorizontalOptions="FillAndExpand" VerticalOptions="Center"
                 Clicked="OnLoginClicked"/>
                  
