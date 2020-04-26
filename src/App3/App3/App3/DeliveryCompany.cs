@@ -12,6 +12,7 @@ namespace App3
         public string DeliveryTime { get; set; }
         public string Price { get; set; }
         public ImageSource ImageUrl { get; set; }
+        public string Result { get; set; }
     
     }
 }

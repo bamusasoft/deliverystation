@@ -23,7 +23,9 @@ namespace App3
                 Name = "هنقرستيشن",
                 Price = "سعر التوصيل: " + "20 - 25",
                 DeliveryTime = "وقت التوصيل: " + "40-45",
-                ImageUrl = ImageSource.FromResource("App3.Images.Hunger.png")
+                ImageUrl = ImageSource.FromResource("App3.Images.Hunger.png"),
+                Result = "أقل سعر"
+
 
 
             });
@@ -31,9 +33,11 @@ namespace App3
             {
                 Id = 2,
                 Name = "وصل",
-                Price = "سعر التوصيل: " + "22 - 25",
+                Price = "سعر التوصيل: " + "22 - 26",
                 DeliveryTime = "وقت التوصيل: " + "50-55",
-                ImageUrl = ImageSource.FromResource("App3.Images.Wassel.png")
+                ImageUrl = ImageSource.FromResource("App3.Images.Wassel.png"),
+                Result = string.Empty
+
 
 
             });
@@ -43,9 +47,8 @@ namespace App3
                 Name = "اوبر ايتس",
                 Price = "سعر التوصيل: " + "27 - 30",
                 DeliveryTime = "وقت التوصيل: " + "30-35",
-                ImageUrl = ImageSource.FromResource("App3.Images.Uber.png")
-
-
+                ImageUrl = ImageSource.FromResource("App3.Images.Uber.png"),
+                Result = "أقل وقت"
             });
             BindingContext = this;
 

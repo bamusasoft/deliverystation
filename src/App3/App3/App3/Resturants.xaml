@@ -9,8 +9,7 @@
         <StackLayout Spacing="10" Padding="10">
             <Label Text="DeliveryStation"  HorizontalOptions="Center" FontSize="Large" Padding="10"/>
     
-            <Label Text="المطاعم المتاحة"
-                  HorizontalOptions="CenterAndExpand" Padding="5"  />
+            
             <Picker x:Name="pickerCategory" FontSize="Medium" SelectedIndexChanged="OnSelectedIndexChanged" Title="برجاء اختيار نوع الخدمة">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
@@ -43,11 +42,12 @@
                                    WidthRequest="60" />
                                 <Label Grid.Column="1" 
                                    Text="{Binding Name}"
-                                   FontAttributes="Bold" />
+                                   FontAttributes="Bold" 
+                                       HorizontalOptions="Start"/>
                                 <Label Grid.Row="1" 
                                    Grid.Column="1" 
                                    Text="{Binding Description}"
-                                   VerticalOptions="End" />
+                                   HorizontalOptions="Start" />
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
